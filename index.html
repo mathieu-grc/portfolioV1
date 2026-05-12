@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Mathieu Garcia</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+    <header class="bg-blue-900 text-white py-16 text-center shadow-lg">
+        <h1 class="text-4xl font-bold">Mathieu Garcia</h1>
+        <p class="text-xl mt-2 text-blue-200">Étudiant en BTS SIO (Option SISR - Solutions d'Infrastructure, Systèmes et Réseaux)</p>
+        <p class="mt-4 text-sm bg-blue-800 inline-block px-4 py-2 rounded-full">Alternant chez ArcelorMittal</p>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 py-10 space-y-12">
+
+        <section class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-bold text-blue-900 border-b-2 border-blue-100 pb-2 mb-4">👋 À propos de moi</h2>
+            <p class="text-gray-600 leading-relaxed">
+                Actuellement en deuxième année de BTS SIO spécialisé en **SISR**, je m'oriente vers les métiers de l'administration systèmes et réseaux. Passionné par l'informatique technique, j'allie la rigueur requise par un grand groupe industriel comme ArcelorMittal aux compétences théoriques et pratiques acquises durant ma formation.
+            </p>
+        </section>
+
+        <section class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-bold text-blue-900 border-b-2 border-blue-100 pb-2 mb-4">🏢 Mon Alternance</h2>
+            <div class="mb-4">
+                <h3 class="text-xl font-semibold text-gray-700">ArcelorMittal <span class="text-sm font-normal text-gray-500">- Leader mondial de l'acier</span></h3>
+                <p class="text-gray-600 italic mt-1 text-sm">
+                    ArcelorMittal est le numéro un mondial de l'exploitation sidérurgique et minière. Présent dans plus de 60 pays, l'entreprise produit de l'acier de haute qualité pour des secteurs clés comme l'automobile, la construction et l'énergie, tout en s'engageant fortement dans la décarbonation de son industrie.
+                </p>
+            </div>
+            
+            <div class="mt-6">
+                <h4 class="font-semibold text-gray-800 mb-2">Mes missions au quotidien :</h4>
+                <ul class="list-disc pl-5 space-y-2 text-gray-600">
+                    <li><strong>Support Utilisateurs :</strong> Assistance technique (niveaux 1 et 2), diagnostic et résolution d'incidents matériels/logiciels, et gestion des demandes via l'outil de ticketing.</li>
+                    <li><strong>Préparation de postes :</strong> Masterisation, configuration réseau, installation des logiciels métiers et déploiement des nouveaux postes de travail pour les collaborateurs du site.</li>
+                    <li><strong>Gestion de parc :</strong> Suivi des actifs informatiques et accompagnement des utilisateurs dans la prise en main de leurs outils.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-bold text-blue-900 border-b-2 border-blue-100 pb-2 mb-4">📂 Projets Majeurs</h2>
+            <div class="space-y-6">
+                
+                <div class="border-l-4 border-blue-500 pl-4 bg-slate-50 p-4 rounded-r-lg">
+                    <h3 class="text-xl font-bold text-gray-700">Maquettage, Sécurisation et Supervision d'une Infrastructure Réseau</h3>
+                    <p class="text-xs text-blue-600 font-semibold uppercase tracking-wider mt-1">Projet Académique (BTS SIO SISR)</p>
+                    <p class="text-sm text-gray-600 mt-2 leading-relaxed">
+                        Dans le cadre d'un projet de groupe, nous avons conçu et déployé une infrastructure réseau virtualisée, sécurisée et supervisée de bout en bout pour répondre aux besoins d'une entreprise.
+                    </p>
+                    <ul class="list-disc pl-5 mt-2 text-xs text-gray-600 space-y-2">
+                        <li><strong>Gestion des Identités :</strong> Déploiement d'un contrôleur de domaine avec <strong>Active Directory (AD)</strong> pour la centralisation des utilisateurs, des droits d'accès et l'application de stratégies de groupe (GPO).</li>
+                        <li><strong>Sécurité & Routage :</strong> Mise en place d'un pare-feu matériel/virtuel sous <strong>OPNsense</strong> pour segmenter le réseau (VLANs), gérer le routage et filtrer les flux entrants/sortants.</li>
+                        <li><strong>Filtrage DNS :</strong> Intégration d'<strong>AdGuard Home</strong> pour sécuriser la navigation des utilisateurs en bloquant les publicités, les traqueurs et les domaines malveillants au niveau du réseau.</li>
+                        <li><strong>Supervision :</strong> Déploiement de la solution open-source <strong>Uptime Kuma</strong> pour surveiller en temps réel la disponibilité des serveurs et des services critiques (ping, requêtes HTTP, alertes).</li>
+                        <li><strong>Gestion de Parc & Helpdesk :</strong> Installation et configuration de <strong>GLPI</strong> pour la gestion des inventaires informatiques et la mise en place d'un centre de services (ticketing d'assistance).</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-bold text-blue-900 border-b-2 border-blue-100 pb-2 mb-4">🛠️ Compétences Techniques</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <h3 class="font-semibold text-gray-700 mb-2">Systèmes & Gestion</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded text-sm">Windows Server & Active Directory</span>
+                        <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded text-sm">GLPI (Gestion de parc & Tickets)</span>
+                        <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded text-sm">Déploiement / Masterisation</span>
+                        <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded text-sm">Uptime Kuma (Supervision)</span>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-gray-700 mb-2">Réseaux & Sécurité</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded text-sm">OPNsense (Firewall & Routage)</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded text-sm">AdGuard Home (Filtrage DNS)</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded text-sm">Services DNS & DHCP</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded text-sm">Virtualisation</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-900 text-white py-8 text-center text-sm">
+        <p class="mb-4">👉 Me contacter :</p>
+        <div class="space-x-4">
+            <a href="mailto:ton.email@exemple.com" class="text-blue-400 hover:underline">Email</a>
+            <a href="https://linkedin.com/in/ton-profil" target="_blank" class="text-blue-400 hover:underline">LinkedIn</a>
+        </div>
+        <p class="mt-6 text-gray-500">© 2026 Mathieu Garcia - Tous droits réservés.</p>
+    </footer>
+
+</body>
+</html>
