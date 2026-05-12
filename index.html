@@ -3,101 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Mathieu Garcia</title>
+    <title>Mathieu Garcia | Portfolio</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Petit effet de lueur subtil sur les cartes comme sur les portfolios modernes */
+        .tech-card:hover {
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.15);
+            border-color: rgba(59, 130, 246, 0.4);
+        }
+    </style>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans">
+<body class="bg-[#0b0f19] text-gray-200 font-sans antialiased selection:bg-blue-500 selection:text-white">
 
-    <header class="bg-blue-900 text-white py-16 text-center shadow-lg">
-        <h1 class="text-4xl font-bold">Mathieu Garcia</h1>
-        <p class="text-xl mt-2 text-blue-200">Étudiant en BTS SIO (Option SISR - Solutions d'Infrastructure, Systèmes et Réseaux)</p>
-        <p class="mt-4 text-sm bg-blue-800 inline-block px-4 py-2 rounded-full">Alternant chez ArcelorMittal</p>
-    </header>
+    <div class="max-w-4xl mx-auto px-4 py-12 md:py-20 space-y-16">
 
-    <main class="max-w-4xl mx-auto px-4 py-10 space-y-12">
+        <header class="flex flex-col-reverse md:flex-row items-center justify-between gap-8 pb-8 border-b border-gray-800/60">
+            <div class="space-y-3 text-center md:text-left">
+                <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-white bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
+                    Mathieu Garcia
+                </h1>
+                <p class="text-xl text-blue-400 font-medium tracking-wide">
+                    Étudiant BTS SIO — Option SISR
+                </p>
+                <p class="text-gray-400 text-sm md:text-base flex items-center justify-center md:justify-start gap-2">
+                    <i class="fas fa-briefcase text-gray-500"></i> Alternant Administration Systèmes & Réseaux chez <span class="text-orange-500 font-semibold">ArcelorMittal</span>
+                </p>
+                
+                <div class="flex items-center justify-center md:justify-start gap-4 pt-2">
+                    <a href="https://github.com/ton-pseudo" target="_blank" class="text-gray-400 hover:text-white text-xl transition-colors" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/ton-profil" target="_blank" class="text-gray-400 hover:text-blue-400 text-xl transition-colors" title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:ton.email@exemple.com" class="text-gray-400 hover:text-emerald-400 text-xl transition-colors" title="Contact Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
 
-        <section class="bg-white p-6 rounded-lg shadow-md">
-            <h2 class="text-2xl font-bold text-blue-900 border-b-2 border-blue-100 pb-2 mb-4">👋 À propos de moi</h2>
-            <p class="text-gray-600 leading-relaxed">
-                Actuellement en deuxième année de BTS SIO spécialisé en **SISR**, je m'oriente vers les métiers de l'administration systèmes et réseaux. Passionné par l'informatique technique, j'allie la rigueur requise par un grand groupe industriel comme ArcelorMittal aux compétences théoriques et pratiques acquises durant ma formation.
+            <div class="relative flex-shrink-0">
+                <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-full blur opacity-30 animate-pulse"></div>
+                <img src="photo.jpg" alt="Mathieu Garcia" class="relative w-28 h-28 md:w-32 md:h-32 rounded-full object-cover border border-gray-800 bg-gray-900">
+            </div>
+        </header>
+
+        <section class="space-y-4">
+            <h2 class="text-xs uppercase font-bold tracking-widest text-blue-500 flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span> 01. À propos de moi
+            </h2>
+            <p class="text-gray-400 leading-relaxed text-base md:text-lg">
+                Actuellement en deuxième année de BTS SIO spécialisé en <span class="text-white font-medium">SISR</span>, je me concentre sur la conception, la sécurisation et la gestion des infrastructures informatiques. Mon alternance au sein d'un grand groupe industriel me permet d'appliquer ces compétences sur le terrain au quotidien.
             </p>
         </section>
 
-        <section class="bg-white p-6 rounded-lg shadow-md">
-            <h2 class="text-2xl font-bold text-blue-900 border-b-2 border-blue-100 pb-2 mb-4">🏢 Mon Alternance</h2>
-            <div class="mb-4">
-                <h3 class="text-xl font-semibold text-gray-700">ArcelorMittal <span class="text-sm font-normal text-gray-500">- Leader mondial de l'acier</span></h3>
-                <p class="text-gray-600 italic mt-1 text-sm">
-                    ArcelorMittal est le numéro un mondial de l'exploitation sidérurgique et minière. Présent dans plus de 60 pays, l'entreprise produit de l'acier de haute qualité pour des secteurs clés comme l'automobile, la construction et l'énergie, tout en s'engageant fortement dans la décarbonation de son industrie.
-                </p>
-            </div>
+        <section class="space-y-4">
+            <h2 class="text-xs uppercase font-bold tracking-widest text-blue-500 flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span> 02. Expérience Professionnelle
+            </h2>
             
-            <div class="mt-6">
-                <h4 class="font-semibold text-gray-800 mb-2">Mes missions au quotidien :</h4>
-                <ul class="list-disc pl-5 space-y-2 text-gray-600">
-                    <li><strong>Support Utilisateurs :</strong> Assistance technique (niveaux 1 et 2), diagnostic et résolution d'incidents matériels/logiciels, et gestion des demandes via l'outil de ticketing.</li>
-                    <li><strong>Préparation de postes :</strong> Masterisation, configuration réseau, installation des logiciels métiers et déploiement des nouveaux postes de travail pour les collaborateurs du site.</li>
-                    <li><strong>Gestion de parc :</strong> Suivi des actifs informatiques et accompagnement des utilisateurs dans la prise en main de leurs outils.</li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="bg-white p-6 rounded-lg shadow-md">
-            <h2 class="text-2xl font-bold text-blue-900 border-b-2 border-blue-100 pb-2 mb-4">📂 Projets Majeurs</h2>
-            <div class="space-y-6">
+            <div class="bg-[#111726] border border-gray-800/80 p-6 rounded-xl space-y-4">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-gray-800/50 pb-3">
+                    <div>
+                        <h3 class="text-lg font-bold text-white">Technicien Support & Déploiement (Alternance)</h3>
+                        <p class="text-sm text-orange-400 font-medium">ArcelorMittal — Sidérurgie & Industrie</p>
+                    </div>
+                    <span class="text-xs bg-gray-800 text-gray-400 px-3 py-1 rounded-full w-max border border-gray-700/50">2024 — Présent</span>
+                </div>
                 
-                <div class="border-l-4 border-blue-500 pl-4 bg-slate-50 p-4 rounded-r-lg">
-                    <h3 class="text-xl font-bold text-gray-700">Maquettage, Sécurisation et Supervision d'une Infrastructure Réseau</h3>
-                    <p class="text-xs text-blue-600 font-semibold uppercase tracking-wider mt-1">Projet Académique (BTS SIO SISR)</p>
-                    <p class="text-sm text-gray-600 mt-2 leading-relaxed">
-                        Dans le cadre d'un projet de groupe, nous avons conçu et déployé une infrastructure réseau virtualisée, sécurisée et supervisée de bout en bout pour répondre aux besoins d'une entreprise.
-                    </p>
-                    <ul class="list-disc pl-5 mt-2 text-xs text-gray-600 space-y-2">
-                        <li><strong>Gestion des Identités :</strong> Déploiement d'un contrôleur de domaine avec <strong>Active Directory (AD)</strong> pour la centralisation des utilisateurs, des droits d'accès et l'application de stratégies de groupe (GPO).</li>
-                        <li><strong>Sécurité & Routage :</strong> Mise en place d'un pare-feu matériel/virtuel sous <strong>OPNsense</strong> pour segmenter le réseau (VLANs), gérer le routage et filtrer les flux entrants/sortants.</li>
-                        <li><strong>Filtrage DNS :</strong> Intégration d'<strong>AdGuard Home</strong> pour sécuriser la navigation des utilisateurs en bloquant les publicités, les traqueurs et les domaines malveillants au niveau du réseau.</li>
-                        <li><strong>Supervision :</strong> Déploiement de la solution open-source <strong>Uptime Kuma</strong> pour surveiller en temps réel la disponibilité des serveurs et des services critiques (ping, requêtes HTTP, alertes).</li>
-                        <li><strong>Gestion de Parc & Helpdesk :</strong> Installation et configuration de <strong>GLPI</strong> pour la gestion des inventaires informatiques et la mise en place d'un centre de services (ticketing d'assistance).</li>
+                <p class="text-sm text-gray-400 italic">
+                    ArcelorMittal est le numéro un mondial de l'exploitation sidérurgique, présent dans plus de 60 pays.
+                </p>
+
+                <div class="space-y-2 pt-2">
+                    <h4 class="text-sm font-semibold text-gray-300">Missions techniques :</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li class="flex items-start gap-2.5">
+                            <span class="text-blue-500 mt-1 text-xs">➔</span>
+                            <span><strong>Support Utilisateurs (Jira/ServiceNow) :</strong> Prise en charge des incidents de niveaux 1 et 2, diagnostic à distance et sur site.</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <span class="text-blue-500 mt-1 text-xs">➔</span>
+                            <span><strong>Préparation de postes :</strong> Gestion du cycle de vie des machines, masterisation d'images système, et intégration au réseau de l'entreprise.</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <span class="text-blue-500 mt-1 text-xs">➔</span>
+                            <span><strong>Gestion de parc informatique :</strong> Maintien à jour des inventaires et support de proximité pour les collaborateurs.</span>
+                        </li>
                     </ul>
                 </div>
-
             </div>
         </section>
 
-        <section class="bg-white p-6 rounded-lg shadow-md">
-            <h2 class="text-2xl font-bold text-blue-900 border-b-2 border-blue-100 pb-2 mb-4">🛠️ Compétences Techniques</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                    <h3 class="font-semibold text-gray-700 mb-2">Systèmes & Gestion</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded text-sm">Windows Server & Active Directory</span>
-                        <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded text-sm">GLPI (Gestion de parc & Tickets)</span>
-                        <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded text-sm">Déploiement / Masterisation</span>
-                        <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded text-sm">Uptime Kuma (Supervision)</span>
+        <section class="space-y-4">
+            <h2 class="text-xs uppercase font-bold tracking-widest text-blue-500 flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span> 03. Projets Réalisés
+            </h2>
+
+            <div class="tech-card bg-[#111726] border border-gray-800/80 p-6 rounded-xl space-y-4 transition-all duration-300">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-400 border border-blue-500/20">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-white">Infrastructure Réseau Maquetée & Sécurisée</h3>
+                            <p class="text-xs text-gray-500">Projet Académique — BTS SIO SISR</p>
+                        </div>
                     </div>
                 </div>
-                <div>
-                    <h3 class="font-semibold text-gray-700 mb-2">Réseaux & Sécurité</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded text-sm">OPNsense (Firewall & Routage)</span>
-                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded text-sm">AdGuard Home (Filtrage DNS)</span>
-                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded text-sm">Services DNS & DHCP</span>
-                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded text-sm">Virtualisation</span>
+
+                <p class="text-sm text-gray-400 leading-relaxed">
+                    Mise en place complète, virtualisée et supervisée d'un environnement réseau d'entreprise répondant à de fortes contraintes de sécurité et de filtrage.
+                </p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 pt-2 text-xs">
+                    <div class="bg-[#0b0f19] p-3 rounded-lg border border-gray-800 flex items-center gap-2.5">
+                        <i class="fab fa-windows text-blue-400"></i>
+                        <div><span class="block text-white font-medium">Active Directory</span><span class="text-gray-500">Gestion GPO & Identités</span></div>
+                    </div>
+                    <div class="bg-[#0b0f19] p-3 rounded-lg border border-gray-800 flex items-center gap-2.5">
+                        <i class="fas fa-shield-halved text-red-400"></i>
+                        <div><span class="block text-white font-medium">OPNsense</span><span class="text-gray-500">Pare-feu & Routage VLANs</span></div>
+                    </div>
+                    <div class="bg-[#0b0f19] p-3 rounded-lg border border-gray-800 flex items-center gap-2.5">
+                        <i class="fas fa-shield-cat text-green-400"></i>
+                        <div><span class="block text-white font-medium">AdGuard Home</span><span class="text-gray-500">Filtrage & Protection DNS</span></div>
+                    </div>
+                    <div class="bg-[#0b0f19] p-3 rounded-lg border border-gray-800 flex items-center gap-2.5">
+                        <i class="fas fa-chart-line text-cyan-400"></i>
+                        <div><span class="block text-white font-medium">Uptime Kuma</span><span class="text-gray-500">Supervision & Alertes</span></div>
+                    </div>
+                    <div class="bg-[#0b0f19] p-3 rounded-lg border border-gray-800 flex items-center gap-2.5">
+                        <i class="fas fa-ticket text-amber-400"></i>
+                        <div><span class="block text-white font-medium">GLPI</span><span class="text-gray-500">Helpdesk & Gestion de parc</span></div>
                     </div>
                 </div>
             </div>
         </section>
 
-    </main>
+        <section class="space-y-4">
+            <h2 class="text-xs uppercase font-bold tracking-widest text-blue-500 flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span> 04. Stack Technique
+            </h2>
+            <div class="flex flex-wrap gap-2 pt-1">
+                <span class="bg-[#111726] border border-gray-800 text-gray-300 px-3.5 py-1.5 rounded-lg text-sm font-medium hover:border-gray-700 transition-colors">Windows Server</span>
+                <span class="bg-[#111726] border border-gray-800 text-gray-300 px-3.5 py-1.5 rounded-lg text-sm font-medium hover:border-gray-700 transition-colors">Active Directory</span>
+                <span class="bg-[#111726] border border-gray-800 text-gray-300 px-3.5 py-1.5 rounded-lg text-sm font-medium hover:border-gray-700 transition-colors">OPNsense</span>
+                <span class="bg-[#111726] border border-gray-800 text-gray-300 px-3.5 py-1.5 rounded-lg text-sm font-medium hover:border-gray-700 transition-colors">AdGuard Home</span>
+                <span class="bg-[#111726] border border-gray-800 text-gray-300 px-3.5 py-1.5 rounded-lg text-sm font-medium hover:border-gray-700 transition-colors">Uptime Kuma</span>
+                <span class="bg-[#111726] border border-gray-800 text-gray-300 px-3.5 py-1.5 rounded-lg text-sm font-medium hover:border-gray-700 transition-colors">GLPI</span>
+                <span class="bg-[#111726] border border-gray-800 text-gray-300 px-3.5 py-1.5 rounded-lg text-sm font-medium hover:border-gray-700 transition-colors">Routage & VLANs</span>
+                <span class="bg-[#111726] border border-gray-800 text-gray-300 px-3.5 py-1.5 rounded-lg text-sm font-medium hover:border-gray-700 transition-colors">Virtualisation</span>
+            </div>
+        </section>
 
-    <footer class="bg-gray-900 text-white py-8 text-center text-sm">
-        <p class="mb-4">👉 Me contacter :</p>
-        <div class="space-x-4">
-            <a href="mailto:ton.email@exemple.com" class="text-blue-400 hover:underline">Email</a>
-            <a href="https://linkedin.com/in/ton-profil" target="_blank" class="text-blue-400 hover:underline">LinkedIn</a>
-        </div>
-        <p class="mt-6 text-gray-500">© 2026 Mathieu Garcia - Tous droits réservés.</p>
-    </footer>
+        <footer class="pt-8 border-t border-gray-800/40 text-center text-xs text-gray-600">
+            <p>Mathieu Garcia © 2026 — Déployé sur GitHub Pages</p>
+        </footer>
+
+    </div>
 
 </body>
 </html>
