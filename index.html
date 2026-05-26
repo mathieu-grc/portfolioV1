@@ -31,6 +31,7 @@
                 radial-gradient(circle at 8% 42%, rgba(251, 191, 36, 0.13), transparent 28rem),
                 linear-gradient(145deg, #17110b 0%, var(--bg) 48%, #050403 100%);
             color: #cbd5e1;
+            transition: background 220ms ease, color 220ms ease;
         }
 
         body::before {
@@ -152,6 +153,87 @@
             filter: saturate(1.08) contrast(1.04);
         }
 
+        .theme-toggle {
+            border: 1px solid rgba(249, 115, 22, 0.45);
+            background: rgba(255, 255, 255, 0.06);
+            color: #fed7aa;
+        }
+
+        body.light-mode {
+            --bg: #e7e2d9;
+            --panel: rgba(246, 241, 232, 0.90);
+            --panel-strong: rgba(232, 225, 214, 0.96);
+            --line: rgba(124, 45, 18, 0.20);
+            background:
+                radial-gradient(circle at 86% 6%, rgba(249, 115, 22, 0.28), transparent 22rem),
+                radial-gradient(circle at 10% 26%, rgba(251, 146, 60, 0.20), transparent 28rem),
+                linear-gradient(145deg, #f3eee6 0%, var(--bg) 52%, #d8d2c8 100%);
+            color: #1f2937;
+        }
+
+        body.light-mode::before {
+            background-image:
+                linear-gradient(rgba(15,23,42,0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(15,23,42,0.05) 1px, transparent 1px);
+        }
+
+        body.light-mode nav {
+            border-color: rgba(249, 115, 22, 0.38) !important;
+            background: rgba(236, 228, 216, 0.92) !important;
+        }
+
+        body.light-mode footer {
+            border-color: rgba(15, 23, 42, 0.12) !important;
+        }
+
+        body.light-mode .industrial-card {
+            box-shadow:
+                inset 0 1px 0 rgba(255,255,255,0.62),
+                0 20px 60px rgba(124,45,18,0.13);
+        }
+
+        body.light-mode .theme-toggle {
+            background: rgba(249, 115, 22, 0.18);
+            color: #7c2d12;
+        }
+
+        body.light-mode .text-white,
+        body.light-mode .text-slate-300,
+        body.light-mode .text-slate-400 {
+            color: #1f2937 !important;
+        }
+
+        body.light-mode .text-slate-500 {
+            color: #64748b !important;
+        }
+
+        body.light-mode .text-orange-200,
+        body.light-mode .text-orange-300,
+        body.light-mode .text-amber-200 {
+            color: #9a3412 !important;
+        }
+
+        body.light-mode .bg-black,
+        body.light-mode .bg-black\/30,
+        body.light-mode .bg-white\/5 {
+            background-color: rgba(255, 247, 237, 0.72) !important;
+        }
+
+        body.light-mode .border-white\/10,
+        body.light-mode .border-white\/15,
+        body.light-mode .border-orange-300\/35 {
+            border-color: rgba(124, 45, 18, 0.20) !important;
+        }
+
+        body.light-mode .skill-pill {
+            background: linear-gradient(135deg, rgba(249,115,22,0.18), rgba(255,247,237,0.78));
+            color: #1f2937;
+        }
+
+        body.light-mode .dot {
+            background: #fff7ed;
+        }
+
         @media (prefers-reduced-motion: reduce) {
             *, *::before, *::after {
                 animation-duration: 0.01ms !important;
@@ -171,16 +253,19 @@
             </a>
             <div class="hidden items-center gap-5 text-xs font-semibold uppercase tracking-wide text-slate-400 md:flex">
                 <a class="transition hover:text-orange-300" href="#profil">Profil</a>
-                <a class="transition hover:text-orange-300" href="#experience">Expérience</a>
-                <a class="transition hover:text-orange-300" href="#taches">Tâches</a>
+                <a class="transition hover:text-orange-300" href="#entreprise">Entreprise</a>
                 <a class="transition hover:text-orange-300" href="#projets">Projets</a>
-                <a class="transition hover:text-orange-300" href="#competences">Compétences</a>
                 <a class="transition hover:text-orange-300" href="#veille">Veille</a>
             </div>
-            <a href="mailto:ton.email@exemple.com" class="inline-flex h-9 items-center gap-2 rounded-md border border-orange-500/45 bg-orange-500/15 px-3 text-xs font-bold uppercase tracking-wide text-orange-200 transition hover:bg-orange-500/25">
-                <i class="fa-solid fa-paper-plane"></i>
-                Contact
-            </a>
+            <div class="flex items-center gap-2">
+                <button id="themeToggle" type="button" class="theme-toggle inline-flex h-9 w-9 items-center justify-center rounded-md transition" aria-label="Changer le thème">
+                    <i id="themeIcon" class="fa-solid fa-sun"></i>
+                </button>
+                <a href="mailto:ton.email@exemple.com" class="inline-flex h-9 items-center gap-2 rounded-md border border-orange-500/45 bg-orange-500/15 px-3 text-xs font-bold uppercase tracking-wide text-orange-200 transition hover:bg-orange-500/25">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    Contact
+                </a>
+            </div>
         </div>
     </nav>
 
@@ -286,8 +371,8 @@
             </div>
         </section>
 
-        <section id="experience" class="boot space-y-4 py-10" style="animation-delay: 0.14s;">
-            <h2 class="section-title">// 02 / Expérience</h2>
+        <section id="entreprise" class="boot space-y-4 py-10" style="animation-delay: 0.14s;">
+            <h2 class="section-title">// 02 / Entreprise</h2>
             <div class="industrial-card rounded-xl p-6 md:p-8">
                 <div class="flex flex-col gap-5 border-b border-white/10 pb-6 md:flex-row md:items-start md:justify-between">
                     <div>
@@ -298,6 +383,79 @@
                         </p>
                     </div>
                     <span class="w-max rounded-md border border-orange-400/35 bg-orange-500/12 px-3 py-1.5 font-mono text-xs font-bold text-orange-200">2024 - 2026</span>
+                </div>
+
+                <div class="mt-8 rounded-xl border border-orange-300/35 bg-black/30 p-5 md:p-6">
+                    <div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+                        <div>
+                            <span class="inline-flex items-center gap-2 rounded-md bg-orange-500 px-3 py-2 text-xs font-black uppercase tracking-wide text-black">
+                                <i class="fa-solid fa-calendar-day"></i>
+                                Journée type
+                            </span>
+                            <h3 class="mt-4 text-2xl font-black text-white">Déroulement d'une journée en support</h3>
+                            <p class="mt-2 max-w-3xl leading-7 text-slate-400">Ma journée est organisée autour du suivi des demandes, de la préparation du matériel et de l'accompagnement des utilisateurs.</p>
+                        </div>
+                        <span class="w-max rounded-md border border-orange-400/35 bg-orange-500/12 px-3 py-1.5 font-mono text-xs font-bold text-orange-200">08h00 - 16h30</span>
+                    </div>
+
+                    <div class="mt-6 grid gap-5 lg:grid-cols-[16rem_1fr]">
+                        <div class="rounded-lg border border-white/10 bg-white/5 p-5">
+                            <p class="font-mono text-xs uppercase tracking-widest text-slate-500">Rythme de la journée</p>
+                            <div class="mt-5 space-y-4">
+                                <div class="flex items-center gap-3">
+                                    <span class="h-3 w-3 rounded-full bg-orange-400"></span>
+                                    <span class="font-mono text-sm font-bold text-white">08h00</span>
+                                </div>
+                                <div class="h-10 border-l border-orange-300/35 pl-4 text-sm text-slate-400">prise de poste</div>
+                                <div class="flex items-center gap-3">
+                                    <span class="h-3 w-3 rounded-full bg-amber-200"></span>
+                                    <span class="font-mono text-sm font-bold text-white">12h00 - 13h00</span>
+                                </div>
+                                <div class="h-10 border-l border-orange-300/35 pl-4 text-sm text-slate-400">pause</div>
+                                <div class="flex items-center gap-3">
+                                    <span class="h-3 w-3 rounded-full bg-orange-400"></span>
+                                    <span class="font-mono text-sm font-bold text-white">16h30</span>
+                                </div>
+                                <div class="border-l border-orange-300/35 pl-4 text-sm text-slate-400">fin de journée</div>
+                            </div>
+                        </div>
+
+                        <div class="rounded-lg border border-white/10 bg-white/5 p-5">
+                            <div class="grid gap-5 md:grid-cols-2">
+                                <div>
+                                    <div class="flex h-11 w-11 items-center justify-center rounded-lg bg-orange-500 text-black">
+                                        <i class="fa-solid fa-envelope-open-text"></i>
+                                    </div>
+                                    <h4 class="mt-4 font-bold text-white">Début de journée</h4>
+                                    <p class="mt-2 leading-7 text-slate-400">À 08h00, je commence par consulter mes mails afin d'identifier les informations importantes, comme les migrations de comptes prévues pour le lendemain.</p>
+                                </div>
+                                <div>
+                                    <div class="flex h-11 w-11 items-center justify-center rounded-lg bg-orange-500 text-black">
+                                        <i class="fa-solid fa-clipboard-list"></i>
+                                    </div>
+                                    <h4 class="mt-4 font-bold text-white">Reprise du suivi</h4>
+                                    <p class="mt-2 leading-7 text-slate-400">Je contrôle ensuite les tickets commencés la veille pour vérifier que le suivi, les commentaires et les informations utiles sont bien à jour.</p>
+                                </div>
+                                <div>
+                                    <div class="flex h-11 w-11 items-center justify-center rounded-lg bg-orange-500 text-black">
+                                        <i class="fa-solid fa-laptop-code"></i>
+                                    </div>
+                                    <h4 class="mt-4 font-bold text-white">Priorité aux préparations</h4>
+                                    <p class="mt-2 leading-7 text-slate-400">Dans un premier temps, je traite les tickets liés aux préparations de postes afin que les équipements soient disponibles dans les délais.</p>
+                                </div>
+                                <div>
+                                    <div class="flex h-11 w-11 items-center justify-center rounded-lg bg-orange-500 text-black">
+                                        <i class="fa-solid fa-headset"></i>
+                                    </div>
+                                    <h4 class="mt-4 font-bold text-white">Support utilisateurs</h4>
+                                    <p class="mt-2 leading-7 text-slate-400">Le reste de la journée, hors pause de 12h00 à 13h00, je traite les incidents ouverts en contactant les utilisateurs par téléphone ou par mail : accès, pertes de données, mises à jour ou problèmes logiciels.</p>
+                                </div>
+                            </div>
+                            <div class="mt-5 rounded-lg border border-orange-300/25 bg-orange-500/10 p-4">
+                                <p class="leading-7 text-slate-300">Avant de terminer à 16h30, je vérifie que les tickets traités sont correctement renseignés et que les actions à suivre sont clairement indiquées.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="timeline-line mt-8 space-y-7">
@@ -323,11 +481,38 @@
                         </div>
                     </article>
                 </div>
+
+                <div class="mt-8 border-t border-white/10 pt-8">
+                    <p class="font-mono text-xs font-bold uppercase tracking-widest text-orange-200">Sous-catégorie</p>
+                    <h3 class="mt-2 text-2xl font-black text-white">Journée type en entreprise</h3>
+                    <div class="mt-5 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+                        <article class="rounded-lg border border-white/10 bg-black/30 p-4">
+                            <i class="fa-solid fa-list-check text-orange-300"></i>
+                            <h4 class="mt-3 font-bold text-white">1. Prioriser les demandes</h4>
+                            <p class="mt-2 text-sm leading-6 text-slate-400">Consultation des tickets, identification des urgences et organisation des interventions de la journée.</p>
+                        </article>
+                        <article class="rounded-lg border border-white/10 bg-black/30 p-4">
+                            <i class="fa-solid fa-headset text-orange-300"></i>
+                            <h4 class="mt-3 font-bold text-white">2. Assister les utilisateurs</h4>
+                            <p class="mt-2 text-sm leading-6 text-slate-400">Diagnostic des incidents, assistance à distance ou sur site et suivi jusqu'à la résolution.</p>
+                        </article>
+                        <article class="rounded-lg border border-white/10 bg-black/30 p-4">
+                            <i class="fa-solid fa-laptop-medical text-amber-200"></i>
+                            <h4 class="mt-3 font-bold text-white">3. Préparer le matériel</h4>
+                            <p class="mt-2 text-sm leading-6 text-slate-400">Préparation de postes, installation d'applications, mises à jour et contrôles avant remise.</p>
+                        </article>
+                        <article class="rounded-lg border border-white/10 bg-black/30 p-4">
+                            <i class="fa-solid fa-user-lock text-white"></i>
+                            <h4 class="mt-3 font-bold text-white">4. Gérer les accès</h4>
+                            <p class="mt-2 text-sm leading-6 text-slate-400">Reset de mots de passe, demandes de droits, ajout d'accès et traçabilité des actions effectuées.</p>
+                        </article>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section id="taches" class="boot space-y-4 py-10" style="animation-delay: 0.18s;">
-            <h2 class="section-title">// 03 / Tâches en entreprise</h2>
+            <h2 class="section-title">// 02.1 / Missions en entreprise</h2>
             <div class="industrial-card rounded-xl p-6 md:p-8">
                 <div class="grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
                     <div>
@@ -345,7 +530,7 @@
                             <div class="rounded-lg border border-white/10 bg-black/30 p-4">
                                 <i class="fa-solid fa-download text-orange-300"></i>
                                 <h4 class="mt-3 font-bold text-white">Installation d'applications</h4>
-                                <p class="mt-2 text-sm leading-6 text-slate-400">Installation, configuration et contrôle du bon fonctionnement des logiciels demandés selon les besoins du service.</p>
+                                <p class="mt-2 text-sm leading-6 text-slate-400">Installation d'application grace un systeme d'exploitation dans l'entreprise pour les deux domaines avec un certains nombre d'applications mis a disposition de l'entreprise. ou installation manuelle via des dossiers</p>
                             </div>
                             <div class="rounded-lg border border-white/10 bg-black/30 p-4">
                                 <i class="fa-solid fa-headset text-amber-200"></i>
@@ -385,7 +570,7 @@
         </section>
 
         <section id="projets" class="boot space-y-4 py-10" style="animation-delay: 0.2s;">
-            <h2 class="section-title">// 04 / Projets</h2>
+            <h2 class="section-title">// 03 / Projets</h2>
             <div class="grid gap-5 lg:grid-cols-[1.1fr_0.9fr]">
                 <article class="industrial-card interactive rounded-xl p-6 md:p-8">
                     <div class="flex items-start gap-4">
@@ -441,28 +626,86 @@
         </section>
 
         <section id="veille" class="boot space-y-4 py-10" style="animation-delay: 0.38s;">
-            <h2 class="section-title">// 06 / Veille technologique</h2>
-            <div class="grid gap-5 md:grid-cols-3">
-                <article class="industrial-card interactive rounded-xl p-6">
-                    <i class="fa-solid fa-tower-broadcast text-2xl text-orange-300"></i>
-                    <h3 class="mt-4 text-lg font-black text-white">5G privée & IoT industriel</h3>
-                    <p class="mt-3 leading-7 text-slate-400">Suivi des usages industriels : capteurs connectés, maintenance prédictive, mobilité sur site et exigences de qualité de service.</p>
-                </article>
-                <article class="industrial-card interactive rounded-xl p-6">
-                    <i class="fa-solid fa-shield-virus text-2xl text-orange-300"></i>
-                    <h3 class="mt-4 text-lg font-black text-white">Convergence IT / OT</h3>
-                    <p class="mt-3 leading-7 text-slate-400">Étude des risques liés aux réseaux industriels, segmentation, DMZ, durcissement et impacts de la directive NIS 2.</p>
-                </article>
-                <article class="industrial-card interactive rounded-xl p-6">
-                    <i class="fa-solid fa-microchip text-2xl text-amber-200"></i>
-                    <h3 class="mt-4 text-lg font-black text-white">Edge computing</h3>
-                    <p class="mt-3 leading-7 text-slate-400">Traitement local de données, réduction de latence, continuité de service et optimisation de la bande passante.</p>
-                </article>
+            <h2 class="section-title">// 05 / Veille technologique</h2>
+            <div class="industrial-card rounded-xl p-6 md:p-8">
+                <div class="grid gap-8 lg:grid-cols-[0.85fr_1.15fr]">
+                    <div>
+                        <p class="font-mono text-xs font-bold uppercase tracking-widest text-orange-200">Zero Trust / JIT / Azure PIM</p>
+                        <h3 class="mt-2 text-2xl font-black text-white">Sécuriser l'administration avec ServiceNow et Microsoft Entra</h3>
+                        <p class="mt-4 leading-8 text-slate-300">
+                            Mon sujet de veille porte sur la sécurisation des processus d'administration grâce au modèle Zero Trust et aux accès Just-In-Time. L'objectif est de ne plus donner de droits permanents : un ticket ServiceNow justifie une élévation Azure PIM limitée à 15 minutes.
+                        </p>
+                        <div class="mt-6 grid gap-3 sm:grid-cols-2">
+                            <div class="rounded-lg border border-white/10 bg-black/30 p-4">
+                                <i class="fa-solid fa-user-shield text-orange-300"></i>
+                                <h4 class="mt-3 font-bold text-white">Principe Zero Trust</h4>
+                                <p class="mt-2 text-sm leading-6 text-slate-400">Aucun accès sensible n'est considéré comme acquis : il doit être demandé, justifié et limité.</p>
+                            </div>
+                            <div class="rounded-lg border border-white/10 bg-black/30 p-4">
+                                <i class="fa-solid fa-clock text-orange-300"></i>
+                                <h4 class="mt-3 font-bold text-white">Accès JIT</h4>
+                                <p class="mt-2 text-sm leading-6 text-slate-400">Les droits administrateur sont accordés uniquement pendant une fenêtre courte : ici 15 minutes.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid gap-4 md:grid-cols-2">
+                        <article class="rounded-lg border border-white/10 bg-black/30 p-4">
+                            <i class="fa-solid fa-ticket text-orange-300"></i>
+                            <h4 class="mt-3 font-bold text-white">1. Ticket ServiceNow</h4>
+                            <p class="mt-2 text-sm leading-6 text-slate-400">Un ticket éphémère trace la demande et sert de justification officielle.</p>
+                        </article>
+                        <article class="rounded-lg border border-white/10 bg-black/30 p-4">
+                            <i class="fa-brands fa-microsoft text-orange-300"></i>
+                            <h4 class="mt-3 font-bold text-white">2. API Microsoft Graph</h4>
+                            <p class="mt-2 text-sm leading-6 text-slate-400">Le script appelle Microsoft Graph pour demander l'activation PIM.</p>
+                        </article>
+                        <article class="rounded-lg border border-white/10 bg-black/30 p-4">
+                            <i class="fa-solid fa-key text-amber-200"></i>
+                            <h4 class="mt-3 font-bold text-white">3. Élévation contrôlée</h4>
+                            <p class="mt-2 text-sm leading-6 text-slate-400">Le rôle est activé pour une durée stricte, avec le numéro de ticket en justification.</p>
+                        </article>
+                        <article class="rounded-lg border border-white/10 bg-black/30 p-4">
+                            <i class="fa-solid fa-shield-halved text-white"></i>
+                            <h4 class="mt-3 font-bold text-white">4. Réduction du risque</h4>
+                            <p class="mt-2 text-sm leading-6 text-slate-400">La surface d'attaque baisse car les privilèges permanents disparaissent.</p>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="mt-8 space-y-4">
+                    <h3 class="text-xl font-black text-white">Story-board visuel</h3>
+                    <div class="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+                        <article class="rounded-lg border border-white/10 bg-black/30 p-3">
+                            <img src="assets/veille-ticket-servicenow.svg" alt="Ticket ServiceNow sécurisé avec cadenas" class="aspect-[16/10] w-full rounded-md object-cover">
+                            <p class="mt-3 font-bold text-white">Chaque accès sensible commence par une demande tracée.</p>
+                        </article>
+                        <article class="rounded-lg border border-white/10 bg-black/30 p-3">
+                            <img src="assets/veille-api-graph.svg" alt="Flux API entre ServiceNow et Microsoft Graph" class="aspect-[16/10] w-full rounded-md object-cover">
+                            <p class="mt-3 font-bold text-white">L'automatisation relie la justification métier à la demande technique.</p>
+                        </article>
+                        <article class="rounded-lg border border-white/10 bg-black/30 p-3">
+                            <img src="assets/veille-jit-15min.svg" alt="Accès Just-In-Time limité à quinze minutes" class="aspect-[16/10] w-full rounded-md object-cover">
+                            <p class="mt-3 font-bold text-white">Le privilège existe seulement le temps nécessaire.</p>
+                        </article>
+                        <article class="rounded-lg border border-white/10 bg-black/30 p-3">
+                            <img src="assets/veille-audit-zero-trust.svg" alt="Bouclier Zero Trust avec preuve d'audit" class="aspect-[16/10] w-full rounded-md object-cover">
+                            <p class="mt-3 font-bold text-white">L'entreprise garde la preuve, le contrôle et la sécurité.</p>
+                        </article>
+                    </div>
+                </div>
+
+                <p class="mt-6 text-xs leading-6 text-slate-500">i
+                    Sources techniques :
+                    <a class="text-orange-300 underline decoration-orange-300/40 underline-offset-4" href="https://learn.microsoft.com/en-us/graph/api/resources/unifiedroleassignmentschedulerequest?view=graph-rest-1.0" target="_blank" rel="noreferrer">Microsoft Graph PIM</a>
+                    et
+                    <a class="text-orange-300 underline decoration-orange-300/40 underline-offset-4" href="https://www.servicenow.com/docs/r/api-reference/rest-api-explorer/t_GetStartedCreateInt.html" target="_blank" rel="noreferrer">ServiceNow Table API</a>.
+                </p>
             </div>
         </section>
 
         <section id="competences" class="boot space-y-4 py-10" style="animation-delay: 0.32s;">
-            <h2 class="section-title">// 05 / Compétences</h2>
+            <h2 class="section-title">// 04 / Compétences</h2>
             <div class="industrial-card rounded-xl p-6 md:p-8">
                 <div class="grid gap-8 md:grid-cols-2">
                     <div>
@@ -496,5 +739,26 @@
     <footer class="relative z-10 border-t border-white/10 px-4 py-8 text-center">
         <p class="font-mono text-xs uppercase tracking-widest text-slate-500">Mathieu Garcia // Portfolio technique numérique // 2026</p>
     </footer>
+
+    <script>
+        const themeToggle = document.getElementById("themeToggle");
+        const themeIcon = document.getElementById("themeIcon");
+        const savedTheme = localStorage.getItem("portfolio-theme");
+
+        function applyTheme(theme) {
+            const isLight = theme === "light";
+            document.body.classList.toggle("light-mode", isLight);
+            themeIcon.className = isLight ? "fa-solid fa-moon" : "fa-solid fa-sun";
+            themeToggle.setAttribute("aria-label", isLight ? "Activer le mode sombre" : "Activer le mode clair");
+        }
+
+        applyTheme(savedTheme || "dark");
+
+        themeToggle.addEventListener("click", () => {
+            const nextTheme = document.body.classList.contains("light-mode") ? "dark" : "light";
+            localStorage.setItem("portfolio-theme", nextTheme);
+            applyTheme(nextTheme);
+        });
+    </script>
 </body>
 </html>
